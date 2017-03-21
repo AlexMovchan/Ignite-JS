@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+
+		//###Задача 1. 
+		var n = 0;
+		function counter(param){
+			return n = n + param
+		}
+		alert(counter(5));
+		alert(counter(7));
+
+
+
+		//###Задача 2.
+		var person = {
+			name : 'alex',
+			age : 25,
+			weight : 82,
+		}
+		 function counter(obj){
+		 	var count = 0;
+		 	for(element in obj){
+		 		if(typeof obj[element] == 'string'){
+		 			count++
+		 		}
+		 	}
+		 	alert(count);
+		 }
+		 counter(person); 
+
+
+
+		//###Задача 3.
+		function makeCounter(a) {
+
+			makeCounter.currentCount = a; 
+
+			 	return function(b) {
+			 		 alert(makeCounter.currentCount + b); 
+
+			 	}
+			}
+		makeCounter(5)(7); 
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
